@@ -39,7 +39,7 @@ export default function Home() {
     <div>
       <Header />
 
-      <div className="relative isolate px-6 pt-14 lg:px-8">
+      <div className="relative isolate px-6 py-14 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
           <div className="max-w-2xl">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -61,7 +61,7 @@ export default function Home() {
                     src={person.imageUrl}
                     width={128}
                     height={128}
-                    className="h-16 w-16 rounded-full"
+                    className="h-16 w-16 rounded-full bg-slate-100"
                   />
                   <div>
                     <h3 className="text-base font-semibold leading-7 tracking-tight text-white">
