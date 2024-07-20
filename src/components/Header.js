@@ -25,7 +25,7 @@ export function Header() {
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">ひざ祭り</span>
             <Image
-              src="/KneeFestaLogo.svg"
+              src="/knee_festa_logo.svg"
               width={84}
               height={50}
               alt="ひざ祭り"
@@ -66,7 +66,7 @@ export function Header() {
             <a href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">ひざ祭り</span>
               <Image
-                src="/KneeFestaLogo.svg"
+                src="/knee_festa_logo.svg"
                 width={84}
                 height={50}
                 alt="ひざ祭り"
