@@ -26,8 +26,7 @@ const products = [
     id: 3,
     name: "Work3",
     href: "#",
-    imageSrc:
-      "/dummy.png",
+    imageSrc: "/dummy.png",
     imageAlt: "Work3",
     date: "2024/4/3",
     creator: "Official",
@@ -36,8 +35,7 @@ const products = [
     id: 4,
     name: "Work4",
     href: "#",
-    imageSrc:
-      "/dummy.png",
+    imageSrc: "/dummy.png",
     imageAlt: "Work4",
     date: "2024/4/4",
     creator: "Official",
@@ -46,8 +44,7 @@ const products = [
     id: 5,
     name: "Work5",
     href: "#",
-    imageSrc:
-      "/dummy.png",
+    imageSrc: "/dummy.png",
     imageAlt: "Work5",
     date: "2024/4/5",
     creator: "Official",
@@ -68,9 +65,6 @@ export default function Home() {
           {products.map((product) => (
             <div key={product.id} className="group relative">
               <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-                <div
-                className="">
-                </div>
                 <Image
                   alt={product.imageAlt}
                   src={product.imageSrc}
@@ -87,7 +81,9 @@ export default function Home() {
                       {product.name}
                     </a>
                   </h3>
-                  <p className="mt-1 text-sm text-slate-500">{product.creator}</p>
+                  <p className="mt-1 text-sm text-slate-500">
+                    {product.creator}
+                  </p>
                 </div>
                 <p className="text-sm font-medium text-slate-500">
                   {product.date}
