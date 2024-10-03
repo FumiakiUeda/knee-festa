@@ -1,20 +1,21 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { Dialog, DialogPanel } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import Image from 'next/image'
+import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { Dialog, DialogPanel } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 import Link from "next/link";
 
 const navigation = [
-  { name: 'About', href: 'about' },
-  { name: 'Member', href: 'member' },
-  { name: 'Works', href: 'works' },
-  // { name: 'Contact', href: 'contact' },
-]
+  { name: "About", href: "about" },
+  { name: "Member", href: "member" },
+  { name: "Works", href: "works" },
+];
 
 export function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="z-50 mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -48,7 +49,11 @@ export function Header() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold leading-6 text-white"
+              className={
+                "/" + item.href == pathname
+                  ? "text-sm font-semibold leading-6 text-white border-b-2 border-white"
+                  : "text-sm font-semibold leading-6 text-slate-400 hover:text-slate-100"
+              }
             >
               {item.name}
             </Link>
@@ -89,7 +94,11 @@ export function Header() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-500"
+                    className={
+                      "/" + item.href == pathname
+                        ? "-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white"
+                        : "-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-400"
+                    }
                   >
                     {item.name}
                   </Link>
