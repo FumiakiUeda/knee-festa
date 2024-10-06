@@ -13,7 +13,7 @@ export default function Home() {
               ひざ祭り
             </h1>
             <p className="mt-6 text-lg leading-8 text-slate-400">
-              ひざから広がる物語の祭典
+              ひざから広がる創作の世界
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link

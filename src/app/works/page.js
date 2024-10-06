@@ -4,50 +4,108 @@ import Image from "next/image";
 const products = [
   {
     id: 1,
-    name: "ぴょんぴょんすうじうさぎ",
-    href: "https://unityroom.com/games/numberusagi",
-    imageSrc:
-      "https://os-worker.unityroom.com/unityroom_production/icon/16452/icon_20200909_233439.png?h=1599662079",
-    imageAlt: "ぴょんぴょんすうじうさぎ",
-    date: "2020/9/9",
+    name: "Bossa Waltz",
+    category: "音楽",
+    href: "https://soundcloud.com/gtsehf2wdxwv/bossa-waltz",
+    imageSrc: "/icon-note.png",
+    imageAlt: "Bossa Waltz",
+    date: "2024/2/18",
     creator: "海風夕",
   },
   {
     id: 2,
+    name: "Toy Block",
+    category: "音楽",
+    href: "https://soundcloud.com/gtsehf2wdxwv/toy-block",
+    imageSrc: "/icon-note.png",
+    imageAlt: "Toy Block",
+    date: "2024/2/11",
+    creator: "海風夕",
+  },
+  {
+    id: 3,
+    name: "ふーPOT",
+    category: "ゲーム",
+    href: "https://unityroom.com/games/hupot",
+    imageSrc:
+      "https://os-worker.unityroom.com/unityroom_production/icon/47975/icon_20230619_044304.png?h=1687117384",
+    imageAlt: "ふーPOT",
+    date: "2023/6/19",
+    creator: "クリオネット, omimo",
+  },
+  {
+    id: 4,
+    name: "CarrotAction",
+    category: "ゲーム",
+    href: "https://unityroom.com/games/carrotaction",
+    imageSrc:
+      "https://os-worker.unityroom.com/unityroom_production/icon/47657/icon_20230612_062511.png?h=1686518711",
+    imageAlt: "CarrotAction",
+    date: "2023/6/12",
+    creator: "クリオネット, omimo",
+  },
+  {
+    id: 5,
     name: "ぐみFactory",
+    category: "ゲーム",
     href: "https://unityroom.com/games/gumi_factory",
     imageSrc:
       "https://os-worker.unityroom.com/unityroom_production/icon/47338/icon_20230605_001702.png?h=1685891822",
     imageAlt: "ぐみFactory",
     date: "2023/6/5",
+    creator: "クリオネット, omimo",
+  },
+  {
+    id: 6,
+    name: "うさたまころりん",
+    category: "ゲーム",
+    href: "https://unityroom.com/games/usatamakororin",
+    imageSrc:
+      "https://os-worker.unityroom.com/unityroom_production/icon/39489/icon_20230118_020523.png?h=1673975123",
+    imageAlt: "うさたまころりん",
+    date: "2023/1/17",
+    creator: "クリオネット, omimo",
+  },
+  {
+    id: 7,
+    name: "ぴょんぴょんすうじうさぎ",
+    category: "ゲーム",
+    href: "https://unityroom.com/games/numberusagi",
+    imageSrc:
+      "https://os-worker.unityroom.com/unityroom_production/icon/16452/icon_20200909_233439.png?h=1599662079",
+    imageAlt: "ぴょんぴょんすうじうさぎ",
+    date: "2020/9/9",
+    creator: "海風夕, omimo",
+  },
+  {
+    id: 8,
+    name: "Calorie Monster",
+    category: "ゲーム",
+    href: "/CalorieMonsterStandaloneBuild.zip",
+    imageSrc: "/calorie_monster.png",
+    imageAlt: "Calorie Monster",
+    date: "2021/7/31",
+    creator: "ともじぃ, 海風夕",
+  },
+  {
+    id: 9,
+    name: "ローリングアクション",
+    category: "ゲーム",
+    href: "https://scratch.mit.edu/projects/332464631",
+    imageSrc: "/rolling.png",
+    imageAlt: "ローリングアクション",
+    date: "2019/9/30",
     creator: "クリオネット",
   },
   {
-    id: 3,
-    name: "Work3",
-    href: "#",
-    imageSrc: "/dummy.png",
-    imageAlt: "Work3",
-    date: "2024/4/3",
-    creator: "Official",
-  },
-  {
-    id: 4,
-    name: "Work4",
-    href: "#",
-    imageSrc: "/dummy.png",
-    imageAlt: "Work4",
-    date: "2024/4/4",
-    creator: "Official",
-  },
-  {
-    id: 5,
-    name: "Work5",
-    href: "#",
-    imageSrc: "/dummy.png",
-    imageAlt: "Work5",
-    date: "2024/4/5",
-    creator: "Official",
+    id: 10,
+    name: "ｳｻﾁｬﾝｼｭｰﾃｨﾝｸﾞ",
+    category: "ゲーム",
+    href: "https://scratch.mit.edu/projects/329210687/",
+    imageSrc: "/shooting.png",
+    imageAlt: "ｳｻﾁｬﾝ",
+    date: "2019/9/19",
+    creator: "クリオネット, omimo",
   },
 ];
 
@@ -85,9 +143,14 @@ export default function Home() {
                     {product.creator}
                   </p>
                 </div>
-                <p className="text-sm font-medium text-slate-500">
-                  {product.date}
-                </p>
+                <div>
+                  <p className="text-sm font-medium text-slate-500 text-right">
+                    {product.category}
+                  </p>
+                  <p className="text-sm font-medium text-slate-500">
+                    {product.date}
+                  </p>
+                </div>
               </div>
             </div>
           ))}
