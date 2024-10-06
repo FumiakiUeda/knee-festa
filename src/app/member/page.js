@@ -18,7 +18,7 @@ const people = [
     name: "omimo",
     role: "イラストレーター",
     imageUrl:
-      "https://cdn.discordapp.com/avatars/455250818120286231/2824e27e4d45edca55e27bcd7c642fdc.webp?size=128",
+      "https://cdn.discordapp.com/avatars/455250818120286231/468e3e59b0b4bd404682111e4ec99db1.webp?size=128",
   },
   {
     name: "クリオネット",
